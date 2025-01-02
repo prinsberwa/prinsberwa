@@ -101,5 +101,5 @@
 $(document).ready(function(){let postItems=$('.post-item'),postCount=5;postItems.slice(postCount).hide();$('#loadMoreBtn').on('click',function(e){e.preventDefault();postCount+=5;postItems.slice(0,postCount).fadeIn();if(postCount>=postItems.length){$('#loadMoreBtn').fadeOut();}});});
 </script>
 </body>
-
+<!-- CREATED FROM SCRATCH BY PRINSBERWA 2025 || BOOTSTRAP BASED XML TEMPLATE || THIS IS BASIC SIMPLE TEMPLATE FOR STARTING, DEVELOPE AND IMPROVE IT YOURSELF -->
 </html>

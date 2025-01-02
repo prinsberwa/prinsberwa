@@ -61,7 +61,9 @@
             <div class="row">
                 <div class="col-12 col-lg-9 order-lg-1">
 
-<div class="post-wrapper"><b:section class='main' id='main' showaddelement='no'><b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'><b:includable id='main'><b:if cond='data:blog.pageType == "index"'><div id="postContainer"><b:loop var='post' values='data:posts'><div class="card mb-4 shadow-sm post-item"><b:if cond='data:post.featuredImage'><img class="card-img-top post-thumbnail" expr:src='data:post.featuredImage' alt="Post Thumbnail" /></b:if><div class="card-body"><h2 class="card-title mb-3"><a expr:href='data:post.url' class="text-dark text-decoration-none fw-bold"><data:post.title /></a></h2><p class="card-text mb-4"><data:post.snippet />...</p><div class="d-flex justify-content-end"><a class="btn btn-outline-primary btn-sm" expr:href='data:post.url'>Read More</a></div></div><div class="card-footer text-muted d-flex justify-content-between"><span>Posted on: <data:post.timestamp /></span><span>By: <data:post.author /></span></div></div></b:loop></div><!-- Load More Button --><div class="d-grid gap-2"><button class="btn btn-outline-primary" id="loadMoreBtn">Load More</button></div></b:if></b:includable></b:widget><b:widget id='FeaturedPost1' locked='false' title='Featured Post' type='FeaturedPost'></b:widget></b:section></div>
+<div class="post-wrapper"><b:section class='main' id='main' showaddelement='no'><b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'><b:includable id='main'><b:if cond='data:blog.pageType == "index"'><div id="postContainer"><b:loop var='post' values='data:posts'><div class="card mb-4 shadow-sm post-item"><b:if cond='data:post.featuredImage'><img class="card-img-top post-thumbnail" expr:src='data:post.featuredImage' alt="Post Thumbnail" /></b:if><div class="card-body"><h2 class="card-title mb-3"><a expr:href='data:post.url' class="text-dark text-decoration-none fw-bold"><data:post.title /></a></h2><p class="card-text mb-4"><data:post.snippet />...</p><div class="d-flex justify-content-end"><a class="btn btn-outline-primary btn-sm" expr:href='data:post.url'>Read More</a></div></div><div class="card-footer text-muted d-flex justify-content-between"><span>Posted on: <data:post.timestamp /></span><span>By: <data:post.author /></span></div></div></b:loop></div>
+    <!-- Load More Button -->
+    <div class="d-grid gap-2"><button class="btn btn-outline-primary" id="loadMoreBtn">Load More</button></div></b:if></b:includable></b:widget><b:widget id='FeaturedPost1' locked='false' title='Featured Post' type='FeaturedPost'></b:widget></b:section></div>
 
 
 
@@ -70,7 +72,12 @@
 
 <!-- Sidebar Wrapper -->
 <div class="sidebar">
-<!-- Blogger Section for Sidebar --><b:section class='sidebar' id='sidebar' preferred='yes' showaddelement='yes'><!-- Popular Posts Widget --><b:widget id='PopularPosts1' type='PopularPosts' title='Popular Posts' locked='false'><b:includable id='main'><div class="card mb-4"><div class="card-header">Popular Posts</div><ul class="list-group list-group-flush"><b:loop var='popularPost' values='data:posts' index='popularPostIndex'><b:if cond='data:popularPostIndex &lt; 6'><li class="list-group-item"><a expr:href='data:popularPost.url'><data:popularPost.title /></a></li></b:if></b:loop></ul></div></b:includable></b:widget><!-- Tags (Labels) Widget --><b:widget id='Label1' type='Label' title='ALL Tags' locked='false'><b:includable id='main'><div class="card mb-4"><div class="card-header">All Tags</div><div class="card-body"><b:loop var='label' values='data:labels'><a expr:href='data:label.url' class="badge bg-primary text-decoration-none me-1 mb-2"><data:label.name /></a></b:loop></div></div></b:includable></b:widget></b:section></div>
+<!-- Blogger Section for Sidebar -->
+    <b:section class='sidebar' id='sidebar' preferred='yes' showaddelement='yes'>
+        <!-- Popular Posts Widget -->
+        <b:widget id='PopularPosts1' type='PopularPosts' title='Popular Posts' locked='false'><b:includable id='main'><div class="card mb-4"><div class="card-header">Popular Posts</div><ul class="list-group list-group-flush"><b:loop var='popularPost' values='data:posts' index='popularPostIndex'><b:if cond='data:popularPostIndex &lt; 6'><li class="list-group-item"><a expr:href='data:popularPost.url'><data:popularPost.title /></a></li></b:if></b:loop></ul></div></b:includable></b:widget>
+        <!-- Tags (Labels) Widget -->
+        <b:widget id='Label1' type='Label' title='ALL Tags' locked='false'><b:includable id='main'><div class="card mb-4"><div class="card-header">All Tags</div><div class="card-body"><b:loop var='label' values='data:labels'><a expr:href='data:label.url' class="badge bg-primary text-decoration-none me-1 mb-2"><data:label.name /></a></b:loop></div></div></b:includable></b:widget></b:section></div>
 
                 </div>
             </div>

@@ -1,4 +1,4 @@
-RenameFiles.bat@echo off
+@echo off
 setlocal enabledelayedexpansion
 
 :: Set the target folder (current directory by default)
